@@ -5,8 +5,18 @@ $(document).ready(onReady);
 // Example:
 // let fungusHP = 100;
 
+
+
+
+let hP = 100
+
+let aP = 100
+
 function onReady() {
-    
+    $('.arcane-scepter').on('click',attackRC)
+    $('.entangle').on('click',attackEN)
+    $('.dragon-blade').on('click',attackDB)
+    $('.star-fire').on('click',attackSF)
     // Make sure you check the index.html file! 
     // There are lots of buttons and things ready for you to hook into here!
     
@@ -15,4 +25,39 @@ function onReady() {
     // - Handle events that ->
     // - Updates state which is ->
     // - Rendered to the DOM
+}
+
+function render(){
+    $('.ap-text').text(aP)
+    $('.hp-text').text(hP)
+}
+
+function attackRC(event){
+    event.preventDefault()
+
+    console.log('hi')
+//$('.ap-text').text()
+ aP -=12
+hP -= 14
+ 
+render();
+
+}
+function attackEN(){
+    aP -= 23
+    hP -= 9
+     
+    render();
+}
+function attackDB(){
+    aP -= 38
+    hP -= 47
+     
+    render();
+}
+function attackSF(){
+    aP -= 33
+    hP -= 25
+     
+    render();
 }
