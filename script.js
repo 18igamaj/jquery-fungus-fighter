@@ -37,27 +37,47 @@ function attackRC(event){
 
     console.log('hi')
 //$('.ap-text').text()
- aP -=12
+aP -=12
 hP -= 14
- 
+if(aP<0){
+    aP = 0
+}
+if(hP<0){
+    hP = 0
+}
 render();
 
 }
 function attackEN(){
     aP -= 23
     hP -= 9
-     
+    if(aP<0){
+        aP = 0
+    }
+    if(hP<0){
+        hP = 0
+    }
     render();
 }
 function attackDB(){
     aP -= 38
     hP -= 47
-     
+    if(aP<0){
+        aP = 0
+    }
+    if(hP<0){
+        hP = 0
+    }
     render();
 }
 function attackSF(){
     aP -= 33
     hP -= 25
-     
+    if(aP<0){
+        aP = 0
+    }
+    if(hP<0){
+        hP = 0
+    }
     render();
 }
