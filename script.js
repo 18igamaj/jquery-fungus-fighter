@@ -30,7 +30,8 @@ function onReady() {
 function render(){
     $('.ap-text').text(aP)
     $('.hp-text').text(hP)
-    freakFung()
+    freakFungi()
+    fungusKill()
 }
 
 function attackRC(event){
@@ -82,13 +83,29 @@ function attackSF(){
     }
     render();
 }
-function freakFung(){
+function freakFungi(){
     if(hP === 0){
     $('.freaky-fungus').removeClass('walk').addClass('dead')
     }
     else if(aP === 0){
         $('.freaky-fungus').removeClass('walk').addClass('jump')
+        $('.attack-btn').prop('disabled', true)
+        
     }
-    
+
 render()
 }
+
+// function fungusKill() {
+//         if (aP === 0) {
+//             document.querySelector('#ap-meter').disabled = true;
+//         // $('.arcane-scepter').attr('disabled' , true)
+//         // $('.entangle').attr('disabled', true)
+//         // $('.dragon-blade').attr('disabled', true)
+//         // $('.star-fire').attr('disabled', true)
+//         // }
+//       }
+
+//       render();
+// };
+
