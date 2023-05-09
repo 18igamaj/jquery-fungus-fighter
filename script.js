@@ -86,9 +86,9 @@ function freakFung(){
     if(hP === 0){
     $('.freaky-fungus').removeClass('walk').addClass('dead')
     }
-    // if(aP === 0){
-    //     $('.freaky-fungus').removeClass('walk').addClass('dead')
-    // }
+    else if(aP === 0){
+        $('.freaky-fungus').removeClass('walk').addClass('jump')
+    }
     
 render()
 }
