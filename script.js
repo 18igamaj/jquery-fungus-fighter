@@ -30,12 +30,13 @@ function onReady() {
 function render(){
     $('.ap-text').text(aP)
     $('.hp-text').text(hP)
+    freakFung()
 }
 
 function attackRC(event){
     event.preventDefault()
 
-    console.log('hi')
+    // console.log('hi')
 //$('.ap-text').text()
 aP -=12
 hP -= 14
@@ -80,4 +81,14 @@ function attackSF(){
         hP = 0
     }
     render();
+}
+function freakFung(){
+    if(hP === 0){
+    $('.freaky-fungus').removeClass('walk').addClass('dead')
+    }
+    // if(aP === 0){
+    //     $('.freaky-fungus').removeClass('walk').addClass('dead')
+    // }
+    
+render()
 }
